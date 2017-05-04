@@ -48,9 +48,9 @@ install:
     #IMPORTANT change clone to sjyoo and finally to kbase after pull requests
     - git clone https://github.com/arfathpasha/kb_SPAdes -b travis
     - cd kb_SPAdes
-    - ls
     # run the kb-sdk test command once to build test_local dir and populate the .ignore files
-    - kb-sdk test -s
+    - kb-sdk test -s || true
+    - ls
     # add test config
     #- sed -i "s/test_user=/test_user=$TEST_USER/" test_local/test.cfg
     #- sed -i "s/test_password=/test_password=$TEST_PASSWORD/" test_local/test.cfg
